@@ -21,11 +21,12 @@ export const NearbyHeader: React.FC<NearbyHeaderProps> = ({ onClick, nearbyUsers
       <Text style={styles.nearbyText}>Nearby</Text>
       <TouchableOpacity onPress={onClick}>
         <View style={styles.iconContainer}>
-          <Text style={styles.countText}>{Object.keys(nearbyUsers).length}</Text>
           <Image
             style={styles.peopleIcon}
             source={require("../../../assets/icons/misc/nearby_icon.png")}
           />
+
+          <Text style={styles.countText}>{Object.keys(nearbyUsers).length}</Text>
         </View>
       </TouchableOpacity>
     </View>
@@ -54,7 +55,6 @@ const styles = StyleSheet.create({
     fontFamily: "Quicksand",
     fontSize: 24,
     fontWeight: "bold",
-    lineHeight: 24,
     color: "white",
     marginRight: "auto",
   },
@@ -65,13 +65,11 @@ const styles = StyleSheet.create({
   },
   iconContainer: {
     display: "flex",
-    flexDirection: "row",
     alignItems: "center",
   },
   countText: {
     fontFamily: "Quicksand",
-    fontSize: 20,
-    paddingRight: "5%",
+    fontSize: 13,
     fontWeight: "bold",
     color: "white",
   },
